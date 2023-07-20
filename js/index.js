@@ -1,14 +1,15 @@
 import Controls from "./controls.js";
 import Timer from "./timer.js";
-
-const buttonPlay = document.querySelector(".play");
-const buttonPause = document.querySelector(".pause");
-const buttonStop = document.querySelector(".stop");
-const buttonSet = document.querySelector(".set");
-const buttonSoundOn = document.querySelector(".sound-on");
-const buttonSoundOff = document.querySelector(".sound-of");
-const minutesDisplay = document.querySelector(".minutes");
-const secondsDisplay = document.querySelector(".seconds");
+import {
+  buttonPlay,
+  buttonPause,
+  buttonStop,
+  buttonSet,
+  buttonSoundOn,
+  buttonSoundOff,
+  minutesDisplay,
+  secondsDisplay
+} from './elements.js';
 
 const controls = Controls({
   buttonPause,
