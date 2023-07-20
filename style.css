@@ -14,7 +14,9 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
+  background: rgb(40,40,55);
+  background: linear-gradient(344deg, rgba(40,40,55,1) 0%, rgba(16,16,18,1) 50%);
   color: var(--text-color);
 
   font-family: "Roboto", sans-serif;
@@ -53,6 +55,7 @@ main {
   font-size: clamp(2.5rem, 2.5rem + 12vw, 5rem);
 
   display: flex;
+  gap: 10px;
   margin-bottom: 1rem;
 }
 
@@ -75,4 +78,12 @@ footer {
   justify-self: end;
 
   padding: 0 2.5rem 2rem 0;
+}
+
+#loom-companion-mv3 {
+  display: none;
+}
+
+#my-app-container {
+  display: none;
 }
