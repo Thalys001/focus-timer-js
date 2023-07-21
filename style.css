@@ -5,19 +5,22 @@
 }
 
 :root {
-  --bg-color: #121214;
+  --bg-color-dark: #121214;
+  --bg-color-light: #ffff;
+  --text-color-dark: #ffff;
+  --text-color-light: #000000;
 
   --base-color: 194;
   --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
   --primary-color: hsl(var(--base-color), 100%, 63%);
-  --text-color: #ffff;
 }
 
 body {
-  /* background-color: var(--bg-color); */
-  background: rgb(40,40,55);
-  background: linear-gradient(344deg, rgba(40,40,55,1) 0%, rgba(16,16,18,1) 50%);
-  color: var(--text-color);
+  background-color: var(--bg-color-dark);
+  /* background-color: var(--bg-color-light); */
+  /* background: linear-gradient(344deg, rgba(40,40,55,1) 0%, rgba(16,16,18,1) 50%); */
+  /* color: var(--text-color-light); */
+  color: var(--text-color-dark);
 
   font-family: "Roboto", sans-serif;
 
@@ -40,6 +43,24 @@ button {
 .pause svg path,
 .sound-on svg path {
   fill: var(--primary-color);
+}
+
+header {
+  position: relative;
+}
+
+header button {
+  position: absolute;
+  right: 0px;
+  padding: 2rem 3.125rem 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  header button {
+    position: absolute;
+    right: 0;
+    padding: 2.5rem 2rem 0 0;
+  }
 }
 
 button svg {
