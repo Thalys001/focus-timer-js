@@ -5,27 +5,29 @@
 }
 
 :root {
-  --bg-color-dark: #121214;
   --bg-color-light: #ffff;
   --text-color-dark: #ffff;
+  --bg-color-dark: #121214;
   --text-color-light: #000000;
 
-  --base-color: 194;
-  --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+  --base-color: 600;
+  --bg-primary-light: hsla(var(--base-color), 100%, 13%, 0.3);
   --primary-color: hsl(var(--base-color), 100%, 63%);
 }
 
 body {
-  background-color: var(--bg-color-dark);
-  /* background-color: var(--bg-color-light); */
-  /* background: linear-gradient(344deg, rgba(40,40,55,1) 0%, rgba(16,16,18,1) 50%); */
-  /* color: var(--text-color-light); */
-  color: var(--text-color-dark);
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
 
   font-family: "Roboto", sans-serif;
 
   display: grid;
   min-height: 100vh;
+}
+
+.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
 }
 
 button {

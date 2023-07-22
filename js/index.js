@@ -26,4 +26,24 @@ const timer = Timer({
 
 const sound = Sound()
 
-Events({controls, timer, sound})
+Events({ controls, timer, sound })
+
+
+const darkMode = document.querySelector('.dark');
+const lightMode = document.querySelector('.light');
+const body = document.body;
+
+function toggleDarkMode() {
+  body.classList.add('dark-mode');
+  darkMode.classList.add('hide');
+  lightMode.classList.remove('hide');
+}
+
+function toggleLightMode() {
+  body.classList.remove('dark-mode');
+  lightMode.classList.add('hide');
+  darkMode.classList.remove('hide');
+}
+
+darkMode.addEventListener("click", toggleDarkMode);
+lightMode.addEventListener("click", toggleLightMode);
