@@ -10,14 +10,17 @@
   --bg-color-dark: #121214;
   --text-color-light: #000000;
 
-  --base-color: 600;
+  --base-color: 212;
   --bg-primary-light: hsla(var(--base-color), 100%, 13%, 0.3);
   --primary-color: hsl(var(--base-color), 100%, 63%);
 }
 
 body {
-  background-color: var(--bg-color-light);
+  /* background-color: var(--bg-color-light); */
   color: var(--text-color-light);
+  background: linear-gradient(45deg, #ffffff, #dddddd, #999999);
+  background-size: 600% 600%;
+  animation: animateBackgroundLight 5s ease infinite;
 
   font-family: "Roboto", sans-serif;
 
@@ -25,9 +28,36 @@ body {
   min-height: 100vh;
 }
 
+@keyframes animateBackgroundLight {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .dark-mode {
-  background-color: var(--bg-color-dark);
+  /* background-color: var(--bg-color-dark); */
   color: var(--text-color-dark);
+  background: linear-gradient(45deg, #000000, #333333, #444444);
+  background-size: 600% 600%;
+  animation: animateBackgroundDark 5s ease infinite;
+}
+
+@keyframes animateBackgroundDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 button {
