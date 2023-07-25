@@ -7,6 +7,7 @@ import {
   buttonStop
 } from './elements.js'
 
+
 export default function ({ controls, timer, sound }) {
   buttonPlay.addEventListener("click", function () {
     controls.play();
@@ -31,7 +32,7 @@ export default function ({ controls, timer, sound }) {
     buttonSoundOff.classList.add("hide");
     sound.bgAudio.play();
   });
-  
+
   buttonSoundOn.addEventListener("click", function () {
     buttonSoundOn.classList.add("hide");
     buttonSoundOff.classList.remove("hide");

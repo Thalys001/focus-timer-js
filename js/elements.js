@@ -6,6 +6,9 @@ const buttonSoundOn = document.querySelector(".sound-on");
 const buttonSoundOff = document.querySelector(".sound-of");
 const minutesDisplay = document.querySelector(".minutes");
 const secondsDisplay = document.querySelector(".seconds");
+const darkMode = document.querySelector('.dark');
+const lightMode = document.querySelector('.light');
+const body = document.body;
 
 export {
   buttonPlay,
@@ -15,5 +18,8 @@ export {
   buttonSoundOn,
   buttonSoundOff,
   minutesDisplay,
-  secondsDisplay
+  secondsDisplay,
+  darkMode,
+  lightMode,
+  body
 }
