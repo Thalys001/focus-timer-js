@@ -1,10 +1,11 @@
 import {
   buttonPause,
   buttonPlay,
-  buttonSet,
+  moreTime,
   buttonSoundOff,
   buttonSoundOn,
-  buttonStop
+  buttonStop,
+  lessTime,
 } from './elements.js'
 
 
@@ -38,16 +39,31 @@ export default function ({ controls, timer, sound }) {
     buttonSoundOff.classList.remove("hide");
     sound.bgAudio.pause();
   });
+  
+  let count = 0 
 
-  buttonSet.addEventListener("click", function () {
+  moreTime.addEventListener("click", function () {
     let newMinutes = controls.getMinutes();
-
+    count = count + newMinutes
     if (!newMinutes) {
       timer.reset();
       return;
     }
 
-    timer.updateDisplay(newMinutes, 0);
-    timer.updateMinutes(newMinutes);
+    timer.updateDisplay(count, 0);
+    timer.updateMinutes(count);
+  })
+
+  lessTime.addEventListener("click", function () {
+    let newMinutes = controls.getMinutes();
+    count = count - newMinutes
+    if (!newMinutes || count < 0) {
+      timer.reset();
+      count = 0 
+      return;
+    }
+
+    timer.updateDisplay(count, 0);
+    timer.updateMinutes(count);
   })
 }

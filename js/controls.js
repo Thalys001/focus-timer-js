@@ -1,14 +1,14 @@
 export default function Controls({
   buttonPause,
   buttonPlay,
-  buttonSet,
+  moreTime,
   buttonStop,
 }) {
   function play() {
     buttonPlay.classList.add("hide");
     buttonPause.classList.remove("hide");
-    buttonSet.classList.add("hide");
-    buttonStop.classList.remove("hide");
+    // moreTime.classList.add("hide");
+    // buttonStop.classList.remove("hide");
   }
 
   function pause() {
@@ -19,12 +19,12 @@ export default function Controls({
   function reset() {
     buttonPlay.classList.remove("hide");
     buttonPause.classList.add("hide");
-    buttonSet.classList.remove("hide");
-    buttonStop.classList.add("hide");
+    // moreTime.classList.remove("hide");
+    // buttonStop.classList.remove("hide");
   }
 
   function getMinutes() {
-    let newMinutes = prompt("quantos minutos?");
+    let newMinutes = 5
     if (!newMinutes) {
       return false
     }

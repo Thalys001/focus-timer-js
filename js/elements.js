@@ -1,7 +1,8 @@
 const buttonPlay = document.querySelector(".play");
 const buttonPause = document.querySelector(".pause");
 const buttonStop = document.querySelector(".stop");
-const buttonSet = document.querySelector(".set");
+const moreTime = document.querySelector(".more-time");
+const lessTime = document.querySelector('.less-time');
 const buttonSoundOn = document.querySelector(".sound-on");
 const buttonSoundOff = document.querySelector(".sound-of");
 const minutesDisplay = document.querySelector(".minutes");
@@ -14,7 +15,8 @@ export {
   buttonPlay,
   buttonPause,
   buttonStop,
-  buttonSet,
+  moreTime,
+  lessTime,
   buttonSoundOn,
   buttonSoundOff,
   minutesDisplay,
