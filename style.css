@@ -71,12 +71,6 @@ button {
   display: none;
 }
 
-.play svg path,
-.pause svg path,
-.sound-on svg path {
-  fill: var(--primary-color);
-}
-
 header {
   position: relative;
 }
@@ -85,14 +79,6 @@ header button {
   position: absolute;
   right: 0px;
   padding: 2rem 3.125rem 0 0;
-}
-
-@media only screen and (max-width: 768px) {
-  header button {
-    position: absolute;
-    right: 0;
-    padding: 2.5rem 2rem 0 0;
-  }
 }
 
 button svg {
@@ -125,8 +111,6 @@ aside div {
 }
 
 #controls {
-  background-color: var(--bg-primary-light);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,6 +127,14 @@ footer {
   justify-self: end;
 
   padding: 0 2.5rem 2rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  header button {
+    position: absolute;
+    right: 0;
+    padding: 2.5rem 2rem 0 0;
+  }
 }
 
 #loom-companion-mv3 {
