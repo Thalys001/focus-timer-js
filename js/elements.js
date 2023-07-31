@@ -10,6 +10,7 @@ const secondsDisplay = document.querySelector(".seconds");
 const darkMode = document.querySelector('.dark');
 const lightMode = document.querySelector('.light');
 const body = document.body;
+const svgElement = document.querySelectorAll('body svg path')
 
 export {
   buttonPlay,
@@ -23,5 +24,6 @@ export {
   secondsDisplay,
   darkMode,
   lightMode,
-  body
+  body,
+  svgElement
 }
